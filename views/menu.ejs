@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>result</title>
+  <link type="text/css" rel="stylesheet" href="/public/index.css">
+</head>
+
+<body>
+  <div id="all2">
+    <p id="title">관 광</p>
+    <table id="totaltable" align="center">
+      <tr>
+        <% place_data.items.forEach((place) => {
+          <!--  blog_results의 title과 place_data의 title을 비교하여 일치하는 것을 찾음 -->
+          const blogItem = blog_results.find((blog) => blog.title === place.title);
+    
+          <!-- 일치하는 title이 있을 경우 상위 3개의 링크를 가져옴 -->
+          const linksToShow = blogItem ? blogItem.links.slice(0, 3) : [];
+        %>
+        <td>
+          <table id="innertable" align="center">
+            <tr>
+              <td id="cell">
+                <div id="box">
+                  <img src="/public/media/<%= place.title %>.png" id="img">
+                  <div id="link">
+                    <% linksToShow.forEach((link, index) => { %>
+                    <a href="<%= link %>" id="review"><%= link %></a>
+                    <% }); %>
+                  </div>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td><%= place.title %></td>
+            </tr>
+            <tr>
+              <td><%= place.address %></td>
+            </tr>
+          </table>
+        </td>
+        <% }); %>
+      </tr>
+    </table>
+    
+    <p id="title">숙 소</p>
+    <table id="totaltable" align="center">
+      <tr>
+        <% hotel_data.items.forEach((hotel)=> {
+          <!--  blog_results의 title과 hotel_data의 title을 비교하여 일치하는 것을 찾음 -->
+          const blogItem = blog_results.find((blog) => blog.title === hotel.title);
+    
+          <!-- 일치하는 title이 있을 경우 상위 3개의 링크를 가져옴 -->
+          const linksToShow = blogItem ? blogItem.links.slice(0, 3) : [];
+        %>
+        <td>
+          <table id="innertable" align="center">
+            <tr>
+              <td id="cell">
+                <div id="box">
+                  <img src="/public/media/<%= hotel.title %>.png" id="img">
+                  <div id="link">
+                    <% linksToShow.forEach((link, index) => { %>
+                    <a href="<%= link %>" id="review"><%= link %></a>
+                    <% }); %>
+                  </div>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td><%= hotel.title %></td>
+            </tr>
+            <tr>
+              <td><%= hotel.address %></td>
+            </tr>
+          </table>
+        </td>
+        <% }); %>
+      </tr>
+    </table>
+    
+    <p id="title">식 당</p>
+    <table id="totaltable" align="center">
+      <tr>
+        <% food_data.items.forEach((food)=> {
+          <!--  blog_results의 title과 food_data의 title을 비교하여 일치하는 것을 찾음 -->
+          const blogItem = blog_results.find((blog) => blog.title === food.title);
+
+          <!-- 일치하는 title이 있을 경우 상위 3개의 링크를 가져옴 -->
+          const linksToShow = blogItem ? blogItem.links.slice(0, 3) : [];
+        %>
+        <td>
+          <table id="innertable" align="center">
+            <tr>
+              <td id="cell">
+                <div id="box">
+                  <img src="/public/media/<%= food.title %>.png" id="img">
+                  <div id="link">
+                    <% linksToShow.forEach((link, index) => { %>
+                    <a href="<%= link %>" id="review"><%= link %></a>
+                    <% }); %>
+                  </div>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td><%= food.title %></td>
+            </tr>
+            <tr>
+              <td><%= food.address %></td>
+            </tr>
+          </table>
+        </td>
+        <% }); %>
+      </tr>
+    </table>
+  </div>
+</body>
+
+</html>

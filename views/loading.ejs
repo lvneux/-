@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Loading</title>
+    <link type="text/css" rel="stylesheet" href="/public/index.css">
+</head>
+
+<body>
+    <div id="all">
+        <p style="margin-top:20%; font-size:40px;">여행 정보를 찾고 있습니다..</p>
+        <div id="loader"></div>
+    </div>
+    <script>
+        let intervalId = setInterval(checkForResult, 30000);
+
+        function checkForResult() {
+            fetch('/process/fetchResult')
+                .then(response => response.json())
+                .then(data => {
+                    if (data.status === 'done') {
+                        clearInterval(intervalId);  // Stop polling
+                        window.location.href = '/showResult';
+                    }
+                })
+                .catch(error => {
+                    console.error('Error fetching result:', error);
+                });
+        }
+    </script>
+</body>
+
+</html>

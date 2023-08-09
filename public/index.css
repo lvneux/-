@@ -1,0 +1,178 @@
+@import url('//cdn.rawgit.com/innks/NanumSquareRound/master/nanumsquareround.min.css');
+
+body {
+  text-align: center;
+  background-color: lightsteelblue;
+  font-family: 'NanumSquareRound', sans-serif;
+  font-weight: 400;
+  min-height: 100%;
+}
+
+#all {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  width: 50%;
+  height: 100vh;
+  overflow: auto;
+}
+
+#all2 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  width: 80%;
+  height: 100vh;
+  overflow: auto;
+}
+
+p {
+  font-family: 'NanumSquareRound', sans-serif;
+  font-weight: 800;
+}
+
+td {
+  font-family: 'NanumSquareRound', sans-serif;
+  font-weight: 700;
+}
+
+#loader {
+  position: absolute;
+  top: 50%;
+  left: 45%;
+  transform: translate(-50%, -50%);
+  border: 4px solid rgba(0, 0, 0, 0.3);
+  border-top: 4px solid #3498db;
+  border-radius: 50%;
+  width: 70px;
+  height: 70px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+#result {
+  font-size: 45px;
+  margin-top: 20%;
+  margin-bottom: 5%;
+}
+
+#mainchat {
+  border-top: 8px solid lightsteelblue;
+  border-bottom: 8px solid lightsteelblue;
+  padding: 15px;
+  margin-top: 5%;
+  margin-bottom: 3%;
+  font-size: 35px;
+}
+
+#imagePaths {
+  margin-top: 1%;
+  width: 90%;
+}
+
+#imagePaths:hover {
+  filter: brightness(50%);
+}
+
+#bt {
+  width: 80%;
+  padding: 50px;
+  font-family: 'NanumSquareRound', sans-serif;
+  font-weight: 800;
+  font-size: 30px;
+  background-color: white;
+  margin-top: 15px;
+  border: 5px solid lightsteelblue;
+  border-radius: 10px;
+}
+
+#bt:hover {
+  background-color: lightsteelblue;
+}
+
+#title {
+  border-top: 8px solid lightsteelblue;
+  border-bottom: 8px solid lightsteelblue;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-size: 30px;
+}
+
+#totaltable {
+  margin: 0 auto; 
+  text-align: center; 
+}
+
+#innertable {
+  margin: 0 auto; 
+  text-align: center; 
+}
+
+#box {
+  width: 90%;
+}
+
+#cell {
+  position: relative;
+  cursor: pointer; 
+}
+
+#cell #box {
+  position: relative;
+  display: inline-block;
+}
+
+#link {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+  padding: 2px;
+  width: 150px;
+  z-index: 1;
+}
+
+#img{
+  width : 90%;
+  height : 90%;
+}
+
+#img:hover {
+  filter: brightness(40%);
+}
+
+#link a {
+  display: block;
+  margin-bottom: 20px;
+}
+
+#cell:hover #link {
+  display: block;
+}
+
+#cell:hover #img{
+filter: brightness(40%);
+}
+
+#review {
+    text-align: center;
+    color: #ffffff;
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }

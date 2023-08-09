@@ -1,0 +1,49 @@
+body{
+    text-align: center;
+    background-color:rgb(176, 196, 222);
+}
+
+#all{
+    position : absolute;
+    top : 50%;
+    left : 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    width : 50%;
+    height : 100%;
+    
+}
+
+#questionnaire{
+    font-family: "나눔스퀘어라운드OTF ExtraBold";
+    font-weight: bold;
+    text-align: center;
+    font-size : 27px;
+    margin-top : 15%;
+}
+
+#load{
+    font-size : 25px;
+    margin-top: 3%;
+}
+
+#bt {
+    width: 75%;
+    padding: 60px;
+    font-size: 22px;
+    background-color: white;
+    margin-top : 20px;
+    font-family: "나눔스퀘어라운드OTF Regular";
+    font-weight: bold;
+    border : 5px solid lightsteelblue;
+    border-radius: 10px;
+}
+
+#bt:hover{
+    background-color: lightsteelblue;
+}
+
+#bar{
+    margin-top: 5%;
+    margin-left: 5%;
+}

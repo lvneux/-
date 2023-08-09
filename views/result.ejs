@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>result</title>
+  <link type="text/css" rel="stylesheet" href="/public/index.css">
+</head>
+
+<body>
+  <div id="all">
+    <p id="result"><%= result %></p>  <!-- 서버로부터 받은 사용자의 여행 타입 출력 -->
+    <p style="font-size:20px;margin-bottom:5%">아래 이미지 중 마음에 드는 것을 하나 골라보세요!<br>이미지와 맞는 여행을 추천해드리겠습니다.</p>
+    <table>
+      <tr>
+        <!-- 서버에서 받아온 이미지 출력 -->
+        <% imgPaths.forEach((imageName) => { %>
+        <% const imagePath = `/${imageName}`; %>
+        <td>
+          <form action="/process/menu" method="POST">
+            <input type="hidden" name="imageName" value="<%= imagePath %>" />
+            <img src="/<%= imageName %>"  alt="<%= imageName %>" id="imagePaths" onclick="this.closest('form').submit()" />
+          </form>
+        </td>
+        <% }); %>
+      </tr>
+    </table>
+  </div>
+</body>
+</html>
