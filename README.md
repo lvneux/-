@@ -24,14 +24,15 @@
 <img src="https://github.com/lvneux/-/assets/104901260/d0697b2a-f36a-41db-acb0-51095adf512c" width="800">
 
 ## 💁 Team
-- 김경훈 : Ai학과 22학번 (백엔드)
-- 유가은 : Ai학과 22학번 (프론트엔드)
+- 김경훈 : AI학과 22학번 (백엔드)
+- 유가은 : AI학과 22학번 (프론트엔드)
   
 ## 🗒️ Project
 부산 여행 어디로 가야할까? 6가지의 질문으로 알아보는 나와 맞는 부산 여행지
 
 ## 🖥️ Development Environment
 - node.js
+- python
 - javascript
 - ejs
 - html
